@@ -10,18 +10,18 @@ import java.net.URL;
 
 public class WebpageReader {
 	
-    public void getWebpageDetail() throws IOException {
+    public String getWebpageDetail(String urlToGet) throws IOException {
     	/*Re-used an example taken from stack overflow
     	http://stackoverflow.com/questions/5232535/read-data-from-webpage*/
         String line = null;
-        URL url = new URL("http://www.premierleague.com/en-gb/players/ea-sports-player-performance-index/");
+        URL url = new URL(urlToGet);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         BufferedReader rd = new BufferedReader(new InputStreamReader(conn
                 .getInputStream()));
         while (rd.readLine() != null) {
             line += rd.readLine();
         }
-        System.out.println(line);
+        return line;
 
     }
     

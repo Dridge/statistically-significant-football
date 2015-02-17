@@ -14,6 +14,7 @@ public class FileManagerTester {
 
     @Test
     public void testCreateFile() {
+        //use less test
         FileManager fm = new FileManager();
         fm.createFile();
         File f = new File(fm.getFileLocation());
