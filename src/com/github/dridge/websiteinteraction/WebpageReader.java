@@ -8,9 +8,9 @@ import java.net.URL;
 
 
 
-public class WebpageReader {
+public class WebPageReader {
 	
-    public String getWebpageDetail(String urlToGet) throws IOException {
+    public String getWebPageDetail(String urlToGet) throws IOException {
     	/*Re-used an example taken from stack overflow
     	http://stackoverflow.com/questions/5232535/read-data-from-webpage*/
         String line = null;

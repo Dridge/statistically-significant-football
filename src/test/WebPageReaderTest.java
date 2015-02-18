@@ -1,6 +1,6 @@
 package test;
 
-import com.github.dridge.websiteinteraction.WebpageReader;
+import com.github.dridge.websiteinteraction.WebPageReader;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -13,10 +13,10 @@ import static junit.framework.TestCase.fail;
 public class WebPageReaderTest {
     @Test
     public void test() {
-        WebpageReader wpr = new WebpageReader();
+        WebPageReader wpr = new WebPageReader();
         String result = null;
         try {
-           result =  wpr.getWebpageDetail("http://www.premierleague.com/en-gb/players/ea-sports-player-performance-index/");
+           result =  wpr.getWebPageDetail("http://www.premierleague.com/en-gb/players/ea-sports-player-performance-index/");
         } catch (IOException e) {
             fail();
             e.printStackTrace();

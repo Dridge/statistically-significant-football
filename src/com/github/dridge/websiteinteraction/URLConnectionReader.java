@@ -7,7 +7,7 @@ import com.github.dridge.files.FileManager;
 
 public class URLConnectionReader {
 
-	private String getWebpageDetail() throws Exception {
+	private String getWebPageDetail() throws Exception {
 		/*
 		 * Re-used an example taken from stack overflow
 		 * http://stackoverflow.com/
@@ -29,7 +29,7 @@ public class URLConnectionReader {
 	}
 
 	public void putDetailIntoFile() throws Exception {
-		String requiredText = this.getWebpageDetail();
-		FileManager managedfile = new FileManager(requiredText);
+		String requiredText = this.getWebPageDetail();
+		FileManager managedFile = new FileManager(requiredText);
 	}
 }

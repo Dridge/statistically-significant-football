@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class FileManager {
-	private String fileLocation = "C:/";
+	private String fileLocation = "C:" + File.separatorChar + "dev" + File.separatorChar + "statSigFootball" + File.separatorChar + "output" + File.separatorChar;
 	private static final String DEFAULT_FILE_NAME = "tempFile.txt";
 
 	public FileManager(String requiredText, String newLocation) {
@@ -38,14 +38,14 @@ public class FileManager {
 	}
 
 	public void createFile() {
-		File f = new File(this.fileLocation + DEFAULT_FILE_NAME);
-		f.getParentFile().mkdirs();
-		try {
-			f.createNewFile();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+        File f = new File(this.fileLocation + DEFAULT_FILE_NAME);
+        //Todo what if you need to make the directory?
+        try {
+            f.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 	public String getFileLocation() {
 		return fileLocation;
@@ -55,7 +55,7 @@ public class FileManager {
 		this.fileLocation = location;
 	}
 
-	public static String getDefaultfilename() {
+	public static String getDefaultFileName() {
 		return FileManager.DEFAULT_FILE_NAME;
 	}
 
